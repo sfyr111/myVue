@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6915b626-93f9-42b3-b737-07796be3be49" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vnode.js" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/vue/index.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.cache/5a08bcef061ed7685a6ad639fad0506d.json" afterPath="$PROJECT_DIR$/.cache/5a08bcef061ed7685a6ad639fad0506d.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.cache/818ffba40b989ff85433ff7effc5c8f4.json" afterPath="$PROJECT_DIR$/.cache/818ffba40b989ff85433ff7effc5c8f4.json" />
@@ -34,18 +35,18 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="vnode.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vnode.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+            <state relative-caret-position="435">
+              <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -75,6 +76,7 @@
         <option value="$PROJECT_DIR$/vue/index.js" />
         <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/vnode.js" />
       </list>
     </option>
   </component>
@@ -187,12 +189,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523363582998</updated>
-      <workItem from="1523363584263" duration="7723000" />
+      <workItem from="1523363584263" duration="8544000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7723000" />
+    <option name="totallyTimeSpent" value="8544000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="710" y="23" width="970" height="953" extended-state="0" />
@@ -243,7 +245,7 @@
         <state relative-caret-position="175">
           <caret line="179" column="25" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="235" selection-end-column="36" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -288,14 +290,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vue/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -304,18 +298,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+        <state relative-caret-position="45">
+          <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        <state relative-caret-position="195">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vnode.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
           <folding />
         </state>
       </provider>
