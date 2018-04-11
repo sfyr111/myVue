@@ -1,4 +1,6 @@
-function observe(data) {
+import Dep from './dep.js'
+
+export function observer(data) {
   if (!data || typeof data !== 'object') {
     return
   }
@@ -8,7 +10,7 @@ function observe(data) {
 }
 
 function defineReactive(data, key, val) {
-  observe(val)
+  observer(val)
 
   const dep = new Dep()
   Object.defineProperty(data, key, {
@@ -20,23 +22,11 @@ function defineReactive(data, key, val) {
       return val
     },
     set: function proxySetter(newVal) {
+      if (val === newVal) return
       val = newVal
+      dep.notify()
     }
   })
 }
 
-class Dep {
-  constructor() {
-    this.subs = []
-  }
-
-  addSub(sub) {
-    this.subs.push(sub)
-  }
-
-  notify() {
-    this.subs.forEach(sub => {
-      sub.update()
-    })
-  }
-}
+Dep.target = null // Watcher 添加完毕
