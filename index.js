@@ -20,6 +20,17 @@ var vm = new Vue({
 
   mounted() {
     console.log('mounted')
+  },
+
+  computed: {
+    cWord() {
+      return this.word + Date.now()
+    },
+    cObjA: {
+      get() {
+        return this.obj.a + Date.now()
+      }
+    }
   }
 })
 

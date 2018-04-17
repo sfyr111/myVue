@@ -9,12 +9,13 @@ export default class Vue {
     let data = this._data = options.data
 
     Object.keys(data).forEach(key => this._proxyData(key))
-    observer(this._data)
 
-    this._init()
+    this.init()
   }
 
-  _init() {
+  init() {
+    this.initComputed()
+    observer(this._data)
     this.$compile = new Compile(this.$options.el, this)
     this.$options.mounted && this.$options.mounted.call(this)
   }
@@ -35,5 +36,19 @@ export default class Vue {
 
   $watch(key, cb) {
     new Wathcher(this, key, cb)
+  }
+
+  initComputed() {
+    const { computed } = this.$options
+    if (typeof computed === 'object') {
+      Object.keys(computed).forEach(key => {
+        Object.defineProperty(this, key, {
+          set() {},
+          get: typeof computed[key] === 'function'
+            ? computed[key]
+            : computed[key].get
+        })
+      })
+    }
   }
 }
