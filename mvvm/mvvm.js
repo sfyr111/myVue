@@ -16,6 +16,7 @@ export default class Vue {
 
   _init() {
     this.$compile = new Compile(this.$options.el, this)
+    this.$options.mounted && this.$options.mounted.call(this)
   }
 
   _proxyData(key) {

@@ -16,6 +16,10 @@ var vm = new Vue({
     add() {
       this.obj.a += 1
     }
+  },
+
+  mounted() {
+    console.log('mounted')
   }
 })
 
