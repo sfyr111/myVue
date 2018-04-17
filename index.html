@@ -1,15 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>myVue</title>
+  <title>vue-demo</title>
 </head>
 <body>
-  <div id="app"></div>
-  <!--<script src="./index.js"></script>-->
-  <script src="./vm.js"></script>
+<div id="vue-app">
+  <input type="text" v-model="word">
+  <p>{{word}}</p>
+  <p>{{obj.a}}</p>
+  <button v-on:click="sayHi">change model</button>
+  <button v-on:click="add">add</button>
+</div>
+
+<script src="./index.js"></script>
 </body>
 </html>

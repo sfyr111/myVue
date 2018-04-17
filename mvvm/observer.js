@@ -1,32 +1,41 @@
 import Dep from './dep.js'
 
-export function observer(data) {
-  if (!data || typeof data !== 'object') {
-    return
+class Observer {
+  constructor(data) {
+    this.data = data
+    this.walk(data)
   }
-  Object.keys(data).forEach(key => {
-    defineReactive(data, key, data[key])
-  })
+
+  walk(data) {
+    Object.keys(data).forEach(key => {
+      this.defineReactive(data, key, data[key])
+    })
+  }
+
+  defineReactive(data, key, val) {
+    const dep = new Dep()
+    observer(val)
+
+    Object.defineProperty(data, key, {
+      enumerable: true,
+      configurable: false,
+      get: function proxyGetter() {
+        // Dep.target is a Watcher instance
+        Dep.target && dep.depend()
+        return val
+      },
+      set: function proxySetter(newVal) {
+        if (val === newVal) return
+        val = newVal
+        observer(newVal)
+        dep.notify()
+      }
+    })
+  }
+
 }
 
-function defineReactive(data, key, val) {
-  observer(val)
-
-  const dep = new Dep()
-  Object.defineProperty(data, key, {
-    enumerable: true,
-    configurable: true,
-    get: function proxyGetter() {
-      // view 层绑定几次 addSub 注册几个 Watcher 绑定完了Dep.target = null 继续绑定注册下个数据
-      Dep.target && dep.addSub(Dep.target)
-      return val
-    },
-    set: function proxySetter(newVal) {
-      if (val === newVal) return
-      val = newVal
-      dep.notify()
-    }
-  })
+export function observer(data) {
+  if (!data || typeof data !== 'object') return
+  return new Observer(data)
 }
-
-Dep.target = null // Watcher 添加完毕

@@ -8,5 +8,11 @@ let vm = new Vue({
   },
 })
 
-vm._data.testA = 'testA change'
-vm._data.testB = 'testB change'
+
+button.addEventListener('click', () => {
+  console.log('click')
+  vm._data.testA = 'testA change' + Math.random()
+})
+
+// vm._data.testB = 'testB change'
+
